@@ -5,6 +5,13 @@
 
 This project provides a tool to convert any PDF document into a podcast episode! Using OpenAI's text-to-speech models and Google Gemini, this tool processes the content of a PDF, generates a natural dialogue suitable for an audio podcast, and outputs it as an MP3 file.
 
+## 演示廣播節目Podcast
+
+歡迎試聽Oli家的商業報告聲音節目。
+
+https://podcasts.apple.com/us/podcast/oli%E5%AE%B6-%E5%95%86%E6%A5%AD%E5%A0%B1%E5%91%8A/id1771158621
+
+
 ## Features
 
 - **Convert PDF to Podcast:** Upload a PDF and convert its content into a podcast dialogue.
