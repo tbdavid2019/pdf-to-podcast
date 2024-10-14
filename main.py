@@ -78,7 +78,7 @@ def generate_audio(file: str, openai_api_key: str = None) -> bytes:
 
     @retry(retry=retry_if_exception_type(ValidationError))
     @llm(
-        model="gpt-4o-mini",
+        model="gpt-4o",
     )
     def generate_dialogue(text: str) -> Dialogue:
         """
@@ -92,15 +92,19 @@ def generate_audio(file: str, openai_api_key: str = None) -> bytes:
 
         First, carefully read through the input text and identify the main topics, key points, and any interesting facts or anecdotes. Think about how you could present this information in a fun, engaging way that would be suitable for an audio podcast.
 
-        <scratchpad>
-        Brainstorm creative ways to discuss the main topics and key points you identified in the input text. Consider using analogies, storytelling techniques, or hypothetical scenarios to make the content more relatable and engaging for listeners.
+    <scratchpad>
+        Take some time to carefully identify not only the main topics but also any subtle themes or interesting side notes that could be expanded upon. For each main topic, think about how you can dive deeper and provide additional context, background information, or contrasting perspectives.
 
-        Keep in mind that your podcast should be accessible to a general audience, so avoid using too much jargon or assuming prior knowledge of the topic. If necessary, think of ways to briefly explain any complex concepts in simple terms.
+        Be creative in finding ways to connect different points of discussion. Consider using analogies, metaphors, or cultural references to make the content more engaging and relatable. You can also include relevant historical or contemporary events, or even explore "what if" scenarios to add depth to the conversation.
 
-        Use your imagination to fill in any gaps in the input text or to come up with thought-provoking questions that could be explored in the podcast. The goal is to create an informative and entertaining dialogue, so feel free to be creative in your approach.
+        Think about including different formats in the dialogue—such as a Q&A section, hypothetical debates between the host and guest, or even brief role-playing segments where the speakers act out certain ideas. These varied formats can help keep the dialogue dynamic and interesting.
 
-        Write your brainstorming ideas and a rough outline for the podcast dialogue here. Be sure to note the key insights and takeaways you want to reiterate at the end.
-        </scratchpad>
+        Additionally, come up with open-ended, thought-provoking questions to guide the conversation. These questions should encourage deeper exploration of the topic and invite the guest to provide personal insights, real-world applications, or speculative answers.
+
+        Don’t hesitate to integrate humor, surprising facts, or anecdotes that could lighten the mood and make the dialogue more entertaining for listeners. Think about ways to transition smoothly between serious and lighter moments to create a balanced and engaging flow.
+
+        At the end of the brainstorming session, list at least three key takeaways or conclusions that you want to reinforce in the final dialogue. These should be seamlessly woven into the conversation, leading to a natural conclusion.
+    </scratchpad>
 
         Now that you have brainstormed ideas and created a rough outline, it's time to write the actual podcast dialogue. Aim for a natural, conversational flow between the host and any guest speakers. Incorporate the best ideas from your brainstorming session and make sure to explain any complex topics in an easy-to-understand way.
 
@@ -111,7 +115,9 @@ def generate_audio(file: str, openai_api_key: str = None) -> bytes:
 
         At the end of the dialogue, have the host and guest speakers naturally summarize the main insights and takeaways from their discussion. This should flow organically from the conversation, reiterating the key points in a casual, conversational manner. Avoid making it sound like an obvious recap - the goal is to reinforce the central ideas one last time before signing off.
 
-        請輸出講稿約3000到4000個字，輸出文稿為__繁體中文__，請注意。
+        Make the dialogue detailed and expansive. Try to include at least three key points or examples, expanding on each one in depth. Ensure that the dialogue flows naturally and each segment contributes to a longer overall conversation.
+ 
+               請輸出講稿約 3,000 characters，輸出文稿為__繁體中文__，請注意。
         </podcast_dialogue>
         """
 
