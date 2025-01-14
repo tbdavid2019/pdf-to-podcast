@@ -742,9 +742,9 @@ with gr.Blocks(title="PDF to Podcast", css="""
             # )
             
             api_base = gr.Textbox(
-                label="Custom API Base",
-                placeholder="https://api.openai.com/v1/models",  # 預設值顯示
-                value="https://api.openai.com/v1/models",        # 預設實際值
+                label="Custom BaseURL for API Base",
+                placeholder="https://gemini.david888.com/v1",  # 預設值顯示
+                value="https://gemini.david888.com/v1",        # 預設實際值
                 info="If you are using a custom or local model, provide the API base URL here.",
             )
 
